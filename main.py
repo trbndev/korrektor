@@ -5,7 +5,11 @@ import os
 
 
 def main():
-    st.title("Korrektor")
+    st.set_page_config(
+        layout="wide", page_title="🧑‍🏫 Korrektor - Your AI Code Assistant"
+    )
+
+    st.title("🧑‍🏫 Korrektor")
     st.subheader("An AI Code Assistant")
 
     # Read the system prompt from a file
