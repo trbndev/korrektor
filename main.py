@@ -24,7 +24,9 @@ def main():
             "Edit System Prompt:", value=system_prompt, height=200
         )
 
-        if st.button("Get AI Suggestions to Enhance Prompt"):
+        if st.button(
+            "Get AI Suggestions to Enhance Prompt (🚧 Highly Experimental - does not work everytime)"
+        ):
             # Get AI suggestions using Ollama
             suggestions = get_ai_suggestions(system_prompt_area)
             if suggestions:
@@ -59,7 +61,6 @@ def main():
     # Code editor for user input
     content = st_monaco(
         value="/* YOUR CODE HERE */",
-        language="python",
         height="300px",
         lineNumbers=True,
         minimap={"enabled": False},
